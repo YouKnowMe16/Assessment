@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Course</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1{
+            background: linear-gradient(
+                to left,
+                red,
+                yellow,
+                green,
+                blue,
+                violet,
+                orange,
+                cyan,
+                magenta,
+                brown,
+                purple,
+                gold,
+                silver,
+                beige,
+                black,
+                olive,
+                tan,
+                teal,
+                maroon,
+                salmon,
+                lime,
+                crimson,
+                navy,
+                chocolate
+            );
+            font-size: 25px;
+            -webkit-text-stroke: 1px #fff;
+            width:fit-content;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color:transparent;
+            animation:anim 2s linear infinite;
+        }
+        @keyframes anim {
+            to{
+                background-position-x: 450px ;
+            }
+            
+        }
+        
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 3%;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            color: #333;
+        }
+        
+        .content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .curriculum p {
+            text-align: start;
+            margin-top: 2%;
+            font-size: 14px;
+            color: #777;
+            line-height: 1.5;
+        }
+        
+        .curriculum h2 {
+            margin-top: 3%;
+            text-align: start;
+        }
+        
+        .content .text {
+            flex: 1;
+            margin-bottom: 20px;
+        }
+        
+        .content .text h2 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .content .text p {
+            font-size: 14px;
+            color: #777;
+            line-height: 1.5;
+        }
+        
+        .content .image-container {
+            flex: 1;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            max-width: 400px;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .content .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px 10px 0 0;
+        }
+        
+        .content .image-container figcaption {
+            background-color: #f4f4f4;
+            padding: 10px;
+            text-align: center;
+            border-radius: 0 0 10px 10px;
+        }
+        
+        .enroll-button,
+        .apply-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .enroll-button a,
+        .apply-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .options {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        
+        .option-box {
+            flex: 1;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+            text-align: center;
+            background-color: #c7c4c4;
+            
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .footer p {
+            font-size: 14px;
+            color: #000000;
+        }
+        
+        
+        .mentors {
+            margin-top: 5%;
+            text-align: center;
+        }
+        
+        .mentors figure {
+            display: inline-block;
+            max-width: 250px;
+            border-radius: 10px;
+            margin: 10px;
+            border: 1px solid black;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .mentors img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+            object-fit: fill;
+        }
+        
+        .mentors figcaption {
+            background-color: #f4f4f4;
+            padding: 10px;
+            text-align: center;
+            border-radius: 0 0 10px 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        .mentors h2 {
+            text-align: center;
+        }
+        
+        .companies {
+            margin-top: 20px;
+            text-align: center;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        
+        .companies img {
+            max-width: 150px;
+            margin: 10px;
+            border-radius: 50%;
+            border: 2px solid black;
+        }
+        
+        .inquiry-form {
+            margin-top: 50px;
+            text-align: center;
+        }
+        
+        .inquiry-form form {
+            max-width: 400px;
+            margin: auto;
+        }
+        
+        .inquiry-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .inquiry-form input,
+        .inquiry-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        
+        .inquiry-form button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .copyright {
+            text-align: center; /* Example styling */
+            margin-top: 20px;
+        }
+
+        
+    .image-flip {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+    
+    .image-flip img {
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+    }
+    
+    .image-flip .back-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Use percentage width to match the image width */
+    height: 100%; /* Use percentage height to match the image height */
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    background-color: #f1f1f1;
+    padding: 5px;
+    box-sizing: border-box;
+    display: none;
+}
+
+    .image-flip:hover {
+        transform: rotateY(180deg);
+    }
+    
+    .image-flip:hover .back-content {
+        display: block;
+    }
+
+    .option-box img {
+    max-width: 178%;
+    max-height: 100%;
+    width: 350px;
+    height: 300px;
+    display: block;
+    
+}
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <b><h2>Free Courses</h2></b>
+        </div>
+        <div class="content">
+            <div class="text">
+                <h2>Introduction to Free Courses</h2>
+                <h2>🚀 Unlock Your Potential with Free Courses and Expert Mentors! 🚀</h2>
+                <p>Looking to master Java, Python, or Web Development? Look no further! Welcome to Free Courses, your ultimate destination for FREE online courses with expert mentors and exciting placement opportunities!</p>
+                <p><b>🔥 Free Courses:</b> Dive into the world of coding with our comprehensive Java, Python, and Web Development courses. Whether you're a beginner or an advanced learner, our curated content will take you from basics to mastery.</p>
+
+                    <p><b>👨‍🏫 Expert Mentors:</b> Learn from the best! Our courses are led by industry experts who are passionate about sharing their knowledge and guiding you through your learning journey. Get personalized feedback and support to excel in your chosen programming language.</p>
+                    <p>💼 Placements: Ready to kickstart your career in tech? We've got you covered! Our placement assistance program connects you with top companies looking for skilled developers. Land your dream job and embark on a rewarding career in tech.</p>
+
+                   <h2>🌟 Why Choose Us?</h2> 
+                    <ol>
+                        <li>Flexibility: Learn at your own pace, anytime, anywhere. </li>
+                           <li>Quality Content: Access high-quality resources and hands-on projects.</li>
+                           <li>Community: Join a vibrant community of learners and mentors for collaboration and support.</li>
+                           <li>Career Growth: Take the next step towards a successful career in technology with our placement support.</li>
+                                            
+                            </li>
+                    </ol>
+                    <h2>Course Timetable</h2>
+                <p>Monday: 6:00 PM - 8:00 PM</p>
+                <p>Wednesday: 6:00 PM - 8:00 PM</p>
+                <p>Friday: 6:00 PM - 8:00 PM</p>
+            </div>
+            
+        </div>
+
+        
+        <div class="options">
+        <div class="option-box">
+            <div class="image-flip">
+                <img src="java.jpeg" alt="Java Image" >
+                <div class="back-content">
+                    <b>Welcome to Java Course!</b>
+                    <p>Java Fundamentals,
+                        Objects and Input/Output,
+                        Decision Structures,
+                        Loops,
+                        Methods,
+                        Introducing Classes,
+                        Arrays and ArrayList Class,
+                        Methods.</p>
+                </div>
+            </div>
+        </div>
+        <div class="option-box">
+            <div class="image-flip">
+                <img src="Python1.jpeg" alt="Python Image" >
+                <div class="back-content">
+                    <b>Welcome to Python Course!</b>
+                    <p>Basics Of Python,
+                       OOPS,
+                       Data Structures,
+                       Arrays,
+                       Pandas,
+                       Numpy,
+                       Selenium,
+                       Web Scraping
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="option-box">
+            <div class="image-flip">
+                <img src="web-development.jpg" alt="Web Development Image" >
+                <div class="back-content">
+                    <b>Welcome to Web Development Course!</b>
+                    <p>Basics Tags,
+                       CSS,
+                       JavaScript,
+                       Anglur,
+                       Node.Js,
+                       Bootstrap,
+                       Jquery
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="enroll-button">
+            <a href="#">Enroll Now</a>
+        </div>
+
+        <marquee behavior="alternate" direction="rights" scrollamount="15">
+            <h1>Enroll now to get started with your Free Course journey!</h1></marquee>
+
+        <div class="options">
+            <div class="option-box">
+                <h3>Free</h3>
+                <p>Access to basic course materials</p>
+                <p>Live Classes</p>
+                <p>Cancel anytime in first 14 days, fully refundable.</p>
+                <p>Dedicated, focused, personalized placement assistance.</p>
+                <div style="margin-top: 35%;" class="apply-button">
+                    <a href="#">Apply Now</a>
+                </div>
+            </div>
+            <div class="option-box">
+                <h3>Paid</h3>
+                <p>Full access to course content and assignments</p>
+                <p>Access to basic course materials</p>
+                <p>Live Classes</p>
+                <p>Cancel anytime in first 14 days, fully refundable.</p>
+                <p>Dedicated, focused, personalized placement assistance.</p>
+                <p>Job support</p>
+                <div style="margin-top: 16%;" class="apply-button">
+                    <a href="#">Apply Now</a>
+                </div>
+            </div>
+            <div class="option-box">
+                <h3>Premium</h3>
+                <p>Priority support and additional resources</p>
+                <p>Full access to course content and assignments</p>
+                <p>Access to basic course materials</p>
+                <p>Live Classes</p>
+                <p>Cancel anytime in first 14 days, fully refundable.</p>
+                <p>Dedicated, focused, personalized placement assistance.</p>
+                <p>Job support</p>
+                <div class="apply-button">
+                    <a href="#">Apply Now</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mentors">
+            <h2>Mentors and Team Members</h2>
+            <figure>
+                <img src="python_mentor.jpeg">
+                <figcaption>
+                    Mentor 1<br> Python Expert
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="Web_developer.jpeg" style="object-fit:cover;" >
+                <figcaption>
+                    Mentor 2 <br> Web Developer
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="Data_scientist.jpeg">
+                <figcaption>
+                    Mentor 3<br> Java Developer
+                </figcaption>
+            </figure>
+        </div>
+
+        <div class="companies ">
+            <h2>Companies for Placement</h2>
+            <img src="Designer.png" > 
+            <img src="Designer (1).png">
+            <img src="Designer (3).png">
+            <img src="Designer (2).png">
+            
+        </div>
+
+        <div class="inquiry-form ">
+            <h2>Contact Us</h2>
+            <form action="# " method="post ">
+                <label for="name ">Name:</label>
+                <input type="text " id="name " name="name " required>
+
+                <label for="email ">Email:</label>
+                <input type="email " id="email " name="email " required>
+
+                <label for="message ">Message:</label>
+                <textarea id="message " name="message " rows="4 " required></textarea>
+
+                <button type="submit ">Submit</button>
+                
+            </form>
+        </div>
+        <div class="copyright">
+            <small><b>&copy; Free Courses. All rights reserved.</b></small>
+          </div>
+          
+    </div>
+</body>
+
+</html>
